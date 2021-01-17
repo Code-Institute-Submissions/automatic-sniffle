@@ -1,3 +1,9 @@
+/* -------------------------colors
+#94928d;
+#fff;
+*/
+
+
 body {
     padding: 0px;
     margin: 0px;
@@ -6,4 +12,31 @@ body {
 
 .desc p {
     text-align: center;
+}
+
+/* ------------------------- card section */
+
+
+.board {
+    width: 100%;
+}
+
+.row {
+    text-align: center;
+}
+
+.playing-card {
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+    padding: 5px;
+    width: 65px;
+    height: 89px;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px #595854;
+}
+
+.playing-card:hover {
+    border: 1px black solid;
 }
