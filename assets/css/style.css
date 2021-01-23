@@ -40,3 +40,43 @@ body {
 .playing-card:hover {
     border: 1px black solid;
 }
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: yellow;
+}
+
+.three {
+    background-color: blue;
+}
+
+.four {
+    background-color: green;
+}
+
+.five {
+    background-color: black;
+}
+
+.six {
+    background-color: brown;
+}
+
+.seven {
+    background-color: aqua;
+}
+
+.eight {
+    background-color: crimson;
+}
+
+.nine {
+    background-color: pink;
+}
+
+.face-hidden {
+    background-color: #fff;
+}
