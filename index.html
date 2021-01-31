@@ -18,7 +18,6 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-light navbar-expand-sm">
-                    <a href="index.html" class="navbar-brand logo">Oliver's Memory Card Game</a>
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -31,6 +30,9 @@
                 </nav>
             </div>
             <!-- end of navbar -->
+            <!-- title -->
+            <h1>Memory Game</h1>
+            <!-- end of title -->
             <!-- description -->
             <div class="col-12">
                 <div class="desc">
@@ -42,17 +44,36 @@
     <!-- end of description -->
     <!-- end of header seciton -->
 
-    <!-- main section - card game, counter -->
+    <!-- main section - scores, card game, counter, timer -->
+    <!-- score -->
+    <section class="scores">
+        <h4>Scores</h4>
+        <ul class="score-list">
+            <li class="score-place"></li>
+            <li class="score-place"></li>
+            <li class="score-place"></li>
+        </ul>
+    </section>
+    <!-- end of scores -->
     <!-- counter -->
-    <div class="counter">
-
-    </div>
+    <span class="move-counter">0</span>
     <!-- end of counter -->
+    <!-- timer -->
+    <div class="timer-container">
+        <span class="timer">
+            01:00
+        </span>
+    </div>
+
+    <div class="reset">
+        <input class="btn btn-primary" type="reset" value="Reset">
+    </div>
+    <!-- end of timer -->
     <!-- main card game -->
     <div class="container board">
         <div class="row">
             <div class="col-12">
-                <div id="card-one" class="playing-card face-hidden one"></div>
+                <div id="card-one" class="playing-card face-hidden one" data-store=""></div>
                 <div id="card-two" class="playing-card face-hidden three"></div>
                 <div id="card-three" class="playing-card face-hidden nine"></div>
                 <div id="card-four" class="playing-card face-hidden seven"></div>
@@ -101,4 +122,6 @@
     <!-- javascript -->
     <script src="js/script/index.js"></script>
     <!-- end of javascript -->
-</body></html>
+</body>
+
+</html>
