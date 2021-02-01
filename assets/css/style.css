@@ -1,5 +1,8 @@
+/* ------------------------- fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Potta+One&display=swap');
+
 /* -------------------------colors
-#94928d;
+#ffbf80;
 #fff;
 */
 
@@ -7,76 +10,151 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #94928d;
+    background: radial-gradient(#ffbf80, #DA4424);
 }
 
-.desc p {
+.description {
+    padding: 20px;
+    font-family: Potta One, Sans-Seriff;
     text-align: center;
+}
+
+.description h1 {
+    font-size: 45px;
+}
+
+.description p {
+    font-size: 20px;
+}
+
+/*-------------------------- button styling */
+
+.btn {
+    cursor: pointer;
+    background-color:
+}
+
+
+/* ---------------------- dashboard */
+
+.dashboard {
+    font-family: Potta One, sans-serif;
+    font-size: 20px;
+    padding: 16px;
+    margin: auto;
+}
+
+/*-------------------------- scores */
+
+.scores {
+    display: inline-block;
+    padding: 20px;
+}
+
+/*-------------------------- counter timer */
+
+.counter-timer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.move-counter {
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.timer {
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+}
+
+.reset input {
+    background-color: #3533C8;
+}
+
+/*-------------------------- modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal-content {
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #eee;
+    width: 90%;
+}
+
+.close {
+    font-size: 25px;
 }
 
 /* ------------------------- card section */
 
-
-.board {
-    width: 100%;
+.game-container {
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
 }
 
 .row {
-    text-align: center;
+    text-align: center
 }
 
 .playing-card {
-    text-align: center;
     display: inline-block;
+    align-content: center;
     margin: 20px;
     padding: 5px;
-    width: 65px;
-    height: 89px;
+    width: 130px;
+    height: 175px;
+    border-radius: 8px;
     background-color: #fff;
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px #595854;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
 }
 
 .playing-card:hover {
     border: 1px black solid;
 }
 
-.one {
-    background-color: red;
+img {
+    position: relative;
+    width: 120px;
+    height: 165px;
+    border-radius: 10px;
 }
 
-.two {
-    background-color: yellow;
-}
-
-.three {
-    background-color: blue;
-}
-
-.four {
-    background-color: green;
-}
-
-.five {
-    background-color: black;
-}
-
-.six {
-    background-color: brown;
-}
-
-.seven {
-    background-color: aqua;
-}
-
-.eight {
-    background-color: crimson;
-}
-
-.nine {
-    background-color: pink;
+.card-back {
+    background-color: #fff;
 }
 
 .face-hidden {
     background-color: #fff;
+}
+
+.playing-card.face-hidden {
+    transform: rotateY(180deg);
 }
