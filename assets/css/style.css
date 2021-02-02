@@ -140,19 +140,29 @@ body {
     border: 1px black solid;
 }
 
-img {
+.card-back {
     position: relative;
     width: 120px;
     height: 165px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #fff;
+    backface-visibility: hidden;
 }
 
-.card-back {
+.card-front {
     background-color: #fff;
-}
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    backface-visibility: visible;
 
-.face-hidden {
-    background-color: #fff;
 }
 
 .playing-card.face-hidden {
