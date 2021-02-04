@@ -24,6 +24,9 @@
                 <p>A game to test your memory</p>
             </div>
         </div>
+        <div class="overlay visible">
+            <button class="start">Let's Begin</button>
+        </div>
     </header>
     <!-- end of description -->
     <!-- end of header seciton -->
@@ -34,11 +37,11 @@
         <div class="counter-timer">
             <div class="row">
                 <div class="col-6">
-                    <span class="move-counter">0</span>
+                    <span id="move-counter">0</span>
                 </div>
                 <div class="col-6">
-                    <span class="timer ">
-                        01:00
+                    <span id="timer ">
+                        60
                     </span>
                 </div>
             </div>
@@ -198,6 +201,7 @@
     </footer>
     <!-- end of footer -->
     <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/script/index.js"></script>
     <!-- end of javascript -->
 </body>
