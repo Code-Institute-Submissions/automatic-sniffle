@@ -1,7 +1,12 @@
-const card = document.querySelectorAll('.playing-card');
+// card array
 
-function flip() {
-    this.classList.toggle('face-hidden');
+const cardArray = ["assets/images/fish1.JPG", "assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG",
+ "assets/images/fish4.JPG", "assets/images/fish5.JPG", "assets/images/fish5.JPG", "assets/images/fish6.JPG", "assets/images/fish6.JPG", "assets/images/fish7.JPG", "assets/images/fish7.JPG", "assets/images/fish8.JPG", "assets/images/fish8.JPG"];
+
+const game = {};
+
+$('.start').click(startGame);
+
+function startGame() {
+    console.log('start');
 }
-
-card.forEach(card => card.addEventListener('click', flip));
