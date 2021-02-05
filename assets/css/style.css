@@ -6,14 +6,14 @@
 #fff;
 */
 
-
 body {
+    height: 100vh;
     padding: 0px;
     margin: 0px;
-    background: radial-gradient(#ffbf80, #DA4424);
+    background: radial-gradient(#ffbf80, #DA4424) no-repeat;
 }
 
-.description {
+header {
     padding: 20px;
     font-family: Potta One, Sans-Seriff;
     text-align: center;
@@ -61,7 +61,6 @@ body {
 }
 
 /*-------------------------- counter timer */
-
 .counter-timer {
     display: flex;
     flex-wrap: wrap;
@@ -90,6 +89,7 @@ body {
     background-color: #3533C8;
 }
 
+
 /*-------------------------- modal */
 
 .modal {
@@ -114,8 +114,10 @@ body {
 /* ------------------------- card section */
 
 
-game-container {
+.game-container {
     margin: 10px;
+    height: 80%;
+    width: 80%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -125,21 +127,17 @@ game-container {
     perspective: 1000px;
 }
 
-.row {
-    text-align: center;
-}
 
 .card {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    margin: 20px;
+    display: inline-block;
+    margin: 10px;
+    line-height: 50px;
     padding: 5px;
     width: 130px;
     height: 175px;
     border-radius: 8px;
     background-color: #fff;
+    background-image: image("assets");
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px #595854;
 }
@@ -150,11 +148,9 @@ game-container {
 
 .playing-card {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 93%;
+    height: 94%;
     border-radius: 12px;
     overflow: hidden;
     backface-visibility: hidden;
@@ -162,12 +158,9 @@ game-container {
     transition: transform 0.7s;
 }
 
+.card-back {}
 
-.card-value {
-    position: relative;
-    height: 100px;
-    width: 120px;
-}
+.card-front {}
 
 .card.visible .card-back {
     transform: rotateY(-180deg);
