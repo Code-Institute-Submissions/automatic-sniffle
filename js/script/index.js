@@ -8,6 +8,16 @@ const game = {};
 
 $('.start').click(startGame);
 
+// card flip/click event listener
+
+$('.game-container').on('click', '.active', function (event) {
+    console.log($(this).data('val'));
+    game.clicks++;
+    $('#move-counter').text(game.clicks);
+    game.pickedCards.push($(this));
+})
+
+
 // shuffle function
 
 
@@ -39,18 +49,18 @@ function startGame() {
         console.log(value);
         let card = $('<div>');
         console.log(card);
-        card.addClass('card');
+        card.addClass('card active');
         card.data('cnt', key + 1);
         card.data('val', value);
 
         // cards
 
         let cardBack = $('<div>');
-        cardBack.addClass('card-back').addClass('playing-card');
+        cardBack.addClass('card-back playing-card');
         //$('.card-back').prepend($('<img src="assets/images/beach.JPG" alt="beach pic">'));
         card.append(cardBack);
         let cardFront = $('<div>');
-        cardFront.addClass('card-front').addClass('playing-card');
+        cardFront.addClass('card-front playing-card');
         //$('.card-front').prepend($('<img>', src: 'cardArray'));
         card.append(cardFront);
         // game container
