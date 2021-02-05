@@ -8,6 +8,15 @@ const game = {};
 
 $('.start').click(startGame);
 
+// shuffle function
+
+
+function shuffleArray(shuffle) {
+    shuffle.sort(function () {
+        return .5 - Math.random();
+    })
+}
+
 // what happens when the button is clicked
 
 function startGame() {
@@ -23,6 +32,7 @@ function startGame() {
 
     game.cardArray = cardImages.concat(cardImages);
     console.log(game.cardArray);
+    shuffleArray(game.cardArray);
     $('.game-container').html('');
     $.each(game.cardArray, function (key, value) {
         console.log(key);
@@ -37,11 +47,11 @@ function startGame() {
 
         let cardBack = $('<div>');
         cardBack.addClass('card-back').addClass('playing-card');
-        $('.card-back').prepend($('<img src="assets/images/beach.JPG" alt="beach pic">'));
-        cardBack.html(key + 1);
+        //$('.card-back').prepend($('<img src="assets/images/beach.JPG" alt="beach pic">'));
         card.append(cardBack);
         let cardFront = $('<div>');
         cardFront.addClass('card-front').addClass('playing-card');
+        //$('.card-front').prepend($('<img>', src: 'cardArray'));
         card.append(cardFront);
         // game container
 
