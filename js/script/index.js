@@ -35,14 +35,16 @@ function startGame() {
 
         // cards
 
-        let cardBack = $('div');
-        cardBack.addClass('playing-card').addClass('card-back');
+        let cardBack = $('<div>');
+        cardBack.addClass('card-back').addClass('playing-card');
+        $('.card-back').prepend($('<img src="assets/images/beach.JPG" alt="beach pic">'));
+        cardBack.html(key + 1);
         card.append(cardBack);
-        let cardFront = $('div');
-        cardFront.css(value);
-        cardFront.addClass('playing-card').addClass('card-front');
+        let cardFront = $('<div>');
+        cardFront.addClass('card-front').addClass('playing-card');
         card.append(cardFront);
         // game container
+
 
         $('.game-container').append(card);
     })
