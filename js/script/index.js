@@ -21,8 +21,16 @@ $('.game-container').on('click', '.active', function (event) {
 
     if (game.pickedCards.length === 2) {
         // is it a match?
+        console.log(game.pickedCards);
+        if (game.pickedCards[0].data('val') == game.pickedCards[1].data('val')) {
+            console.log('match');
+        } else {
+            console.log('no match');
+        }
     }
 })
+
+
 
 
 // shuffle function
@@ -64,7 +72,7 @@ function startGame() {
 
         let cardBack = $('<div>');
         cardBack.addClass('card-back playing-card');
-        //$('.card-back').prepend($('<img src="assets/images/beach.JPG" alt="beach pic">'));
+        $('.card-back').prepend($('<img src="assets/images/beach.JPG" alt="beach pic">'));
         card.append(cardBack);
         let cardFront = $('<div>');
         cardFront.addClass('card-front playing-card');
