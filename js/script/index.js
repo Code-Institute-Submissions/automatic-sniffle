@@ -15,6 +15,13 @@ $('.game-container').on('click', '.active', function (event) {
     game.clicks++;
     $('#move-counter').text(game.clicks);
     game.pickedCards.push($(this));
+    $(this).removeClass('.active');
+    $(this).find('.card-back').hide();
+    $(this).find('.card-front').show();
+
+    if (game.pickedCards.length === 2) {
+        // is it a match?
+    }
 })
 
 
