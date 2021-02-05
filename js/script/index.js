@@ -12,7 +12,7 @@ $('.start').click(startGame);
 
 function startGame() {
     console.log('start');
-    $('.start').hide();
+    $('.start').hide('.start');
     game.clicks = 0;
 
     // array to store the selected card
@@ -23,25 +23,25 @@ function startGame() {
 
     game.cardArray = cardImages.concat(cardImages);
     console.log(game.cardArray);
+    $('.game-container').html('');
     $.each(game.cardArray, function (key, value) {
         console.log(key);
         console.log(value);
         let card = $('<div>');
         console.log(card);
         card.addClass('card');
-        card.data('count', key + 1);
+        card.data('cnt', key + 1);
         card.data('val', value);
 
         // cards
 
         let cardBack = $('div');
-        cardBack.addClass('.playing-card');
-        cardBack.addClass('.card.back');
-
+        cardBack.addClass('playing-card').addClass('card-back');
+        card.append(cardBack);
         let cardFront = $('div');
-        cardFront.addClass('.playing-card');
-        cardFront.addClass('.card-front');
-
+        cardFront.css(value);
+        cardFront.addClass('playing-card').addClass('card-front');
+        card.append(cardFront);
         // game container
 
         $('.game-container').append(card);
