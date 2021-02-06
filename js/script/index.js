@@ -27,6 +27,8 @@ $('.game-container').on('click', '.active', function (event) {
                 game.stop = false;
                 console.log('match');
                 removeCards(game.pickedCards[0].data('val'));
+                removeCards(game.pickedCards[1].data('val'));
+                game.pickedCards = [];
                 if (game.cardArray.length == 0) {
                     console.log('finis');
                 }
@@ -114,7 +116,7 @@ function startGame() {
 
         // card front image
 
-        $('.card-front').append('<img src=' + 'value' + '>');
+        $('.card-front').append('<img src=' + value + '>');
         card.append(cardFront);
 
         // game container
