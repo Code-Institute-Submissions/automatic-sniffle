@@ -72,7 +72,7 @@ function shuffleArray(shuffle) {
 
 function startGame() {
     console.log('start');
-    $('.start').hide()
+    $('.start').hide();
     $('.reset').removeClass('.visible');
     game.clicks = 0;
 
