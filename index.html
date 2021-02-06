@@ -8,27 +8,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
     <title>Oliver's Memory Card Game</title>
 </head>
 
 <body>
     <header>
-        <!-- containing navbar and description  -->
-        <!-- navbar -->
-
-        <!-- end of navbar -->
         <!-- title description -->
-        <div class="col-12">
-            <div class="description">
-                <h1>Memory Game</h1>
-                <p>A game to test your memory</p>
-            </div>
-        </div>
-        <div class="overlay visible">
-            <button class="start">Let's Begin</button>
+        <div class="description">
+            <h1>Memory Game</h1>
+            <p>A game to test your memory</p>
         </div>
     </header>
-    <!-- end of description -->
     <!-- end of header seciton -->
 
     <!-- main section - scores, card game, counter, timer -->
@@ -46,12 +37,22 @@
                 </div>
             </div>
         </div>
-        <div class="reset">
-            <input class="btn" type="reset" value="Reset">
+        <div class="row">
+            <div class="start">
+                <input class="btn" type="start" value="start">
+            </div>
+            <div class="reset visible">
+                <input class="btn " type="reset" value="Reset">
+            </div>
         </div>
     </section>
-    <!-- modal section -->
 
+    <section class="game-container">
+
+    </section>
+
+
+    <!-- end of main section -->
     <section class="game-won-modal">
         <div id="modal-win" class="modal">
             <!-- modal content -->
@@ -74,136 +75,11 @@
         </div>
     </section>
 
-    <!-- end of modal -->
-    <!-- end of timer -->
-    <!-- main card game -->
-    <section class="game-container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish1.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish1.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish2.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish2.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish3.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish3.JPG">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish4.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish4.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish5.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish5.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish6.JPG">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="playing-card card-back">
-                        <img src="assets/images/beach.JPG" alt="beach pic">
-                    </div>
-                    <div class="playing-card card-front">
-                        <img class="card-value" src="assets/images/fish6.JPG">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end of card game -->
-
-
-    <!-- end of main section -->
-    <!-- footer -->
-    <footer class="container-fluid bg-color-footer">
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-4">
-
-        </div>
-        <div class="col-md-4">
-
-        </div>
-    </footer>
-    <!-- end of footer -->
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="js/script/index.js"></script>
     <!-- end of javascript -->
+
 </body>
 
 </html>
