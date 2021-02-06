@@ -12,24 +12,28 @@ $('.start').click(startGame);
 
 $('.game-container').on('click', '.active', function (event) {
     console.log($(this).data('val'));
-    game.clicks++;
-    $('#move-counter').text(game.clicks);
-    game.pickedCards.push($(this));
-    $(this).removeClass('.active');
-    $(this).find('.card-back').hide();
-    $(this).find('.card-front').show();
+    if (!game.stop) {
+        game.clicks++;
+        $('#move-counter').text(game.clicks);
+        game.pickedCards.push($(this));
+        $(this).removeClass('.active');
+        $(this).find('.card-back').hide();
+        $(this).find('.card-front').show();
 
-    if (game.pickedCards.length === 2) {
-        // is it a match?
-        console.log(game.pickedCards);
-        if (game.pickedCards[0].data('val') == game.pickedCards[1].data('val')) {
-            console.log('match');
-            removeCards(game.pickedCards[0].data('val'));
-            if (game.cardArray.length == 0) {
-                console.log('finis');
+        if (game.pickedCards.length === 2) {
+            // is it a match?
+            console.log(game.pickedCards);
+            if (game.pickedCards[0].data('val') == game.pickedCards[1].data('val')) {
+                game.stop = false;
+                console.log('match');
+                removeCards(game.pickedCards[0].data('val'));
+                if (game.cardArray.length == 0) {
+                    console.log('finis');
+                }
+            } else {
+                game.stop = true;
+                game.timer = setInterval(returnCard, 500);
             }
-        } else {
-            returnCard();
         }
     }
 })
@@ -48,8 +52,11 @@ function removeCards(val) {
 
 function returnCard() {
     console.log('not a match');
+    flipBack(game.pickedCards[0]);
     flipBack(game.pickedCards[1]);
+    clearInterval(game.timer);
     game.pickedCards = [];
+    game.stop = false;
 }
 
 function flipBack(element) {
@@ -75,6 +82,7 @@ function startGame() {
     $('.start').hide();
     $('.reset').removeClass('.visible');
     game.clicks = 0;
+    game.stop = false;
 
     // array to store the selected card
 
