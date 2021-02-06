@@ -1,6 +1,6 @@
 // card array
 
-const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG", "assets/images/fish5.JPG", "assets/images/fish6.JPG", "assets/images/fish7.JPG", "assets/images/fish8.JPG", ];
+const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG", "assets/images/fish5.JPG", "assets/images/fish6.JPG", "assets/images/fish7.JPG", "assets/images/fish8.JPG", "assets/images/fish9.JPG", ];
 
 const game = {};
 
@@ -24,13 +24,39 @@ $('.game-container').on('click', '.active', function (event) {
         console.log(game.pickedCards);
         if (game.pickedCards[0].data('val') == game.pickedCards[1].data('val')) {
             console.log('match');
+            removeCards(game.pickedCards[0].data('val'));
+            if (game.cardArray.length == 0) {
+                console.log('finis');
+            }
         } else {
-            console.log('no match');
+            returnCard();
         }
     }
 })
 
+// remove the cards from the pickedCards array
 
+function removeCards(val) {
+    console.log(game.cardArray);
+    game.cardArray = game.cardArray.filter(function (element) {
+        return element != val;
+    })
+    console.log(game.cardArray);
+}
+
+// return card to back position
+
+function returnCard() {
+    console.log('not a match');
+    flipBack(game.pickedCards[1]);
+    game.pickedCards = [];
+}
+
+function flipBack(element) {
+    element.addClass('.active');
+    element.find('.card-back').show();
+    element.find('.card-front').hide();
+}
 
 
 // shuffle function
@@ -46,7 +72,8 @@ function shuffleArray(shuffle) {
 
 function startGame() {
     console.log('start');
-    $('.start').hide('.start');
+    $('.start').hide()
+    $('.reset').removeClass('.visible');
     game.clicks = 0;
 
     // array to store the selected card
@@ -71,13 +98,17 @@ function startGame() {
         // cards
 
         let cardBack = $('<div>');
-        cardBack.addClass('card-back playing-card');
-        $('.card-back').prepend($('<img src="assets/images/beach.JPG" alt="beach pic">'));
+        cardBack.addClass('card-back playing-card active');
+        $('.card-back').append($('<img src="assets/images/beach.JPG" alt="beach pic">'));
         card.append(cardBack);
         let cardFront = $('<div>');
         cardFront.addClass('card-front playing-card');
-        //$('.card-front').prepend($('<img>', src: 'cardArray'));
+
+        // card front image
+
+        $('.card-front').append('<img src=' + 'value' + '>');
         card.append(cardFront);
+
         // game container
 
 
