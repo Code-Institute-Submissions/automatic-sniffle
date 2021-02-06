@@ -30,7 +30,7 @@ $('.game-container').on('click', '.active', function (event) {
                 removeCards(game.pickedCards[1].data('val'));
                 game.pickedCards = [];
                 if (game.cardArray.length == 0) {
-                    console.log('finis');
+                    displayModal();
                 }
             } else {
                 game.stop = true;
@@ -66,6 +66,7 @@ function flipBack(element) {
     element.find('.card-back').show();
     element.find('.card-front').hide();
 }
+
 
 
 // shuffle function
@@ -123,4 +124,36 @@ function startGame() {
 
         $('.game-container').append(card);
     })
+}
+
+
+
+// display modal
+
+function displayModal() {
+    const modalClose = document.getElementsByClassName('close')[0];
+    modal.style.display = 'block';
+    modalClose.onclick = function () {
+        modal.style.display = 'none';
+    }
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+
+// reset button and play again
+
+reset.addEventListener('click', resetAll);
+playAgain.addEventListener('click', function () {
+    modal.style.display = 'none';
+    resetAll();
+});
+
+function resetAll() {
+    game.clicks = 0;
+    game.timer = 60;
+    game.pickedCards = [];
+    startGame();
 }
