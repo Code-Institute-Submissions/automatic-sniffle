@@ -16,7 +16,7 @@ $('.game-container').on('click', '.active', function (event) {
         game.clicks++;
         $('#move-counter').text(game.clicks);
         game.pickedCards.push($(this));
-        $(this).removeClass('.active');
+        $(this).removeClass('active');
         $(this).find('.card-back').hide();
         $(this).find('.card-front').show();
 
@@ -62,7 +62,7 @@ function returnCard() {
 }
 
 function flipBack(element) {
-    element.addClass('.active');
+    element.addClass('active');
     element.find('.card-back').show();
     element.find('.card-front').hide();
 }
@@ -82,7 +82,7 @@ function shuffleArray(shuffle) {
 function startGame() {
     console.log('start');
     $('.start').hide();
-    $('.reset').removeClass('.visible');
+    $('.reset').removeClass('visible');
     game.clicks = 0;
     game.stop = false;
 
@@ -101,23 +101,22 @@ function startGame() {
         console.log(value);
         let card = $('<div>');
         console.log(card);
-        card.addClass('card active');
+        card.addClass('cards active');
         card.data('cnt', key + 1);
         card.data('val', value);
 
         // cards
 
-        let cardBack = $('<div>');
-        cardBack.addClass('card-back playing-card active');
-        $('.card-back').append($('<img src="assets/images/beach.JPG" alt="beach pic">'));
+        let cardBack = $('<img src="assets/images/beach.JPG" alt="beach pic">');
+        cardBack.addClass('card-back active');
         card.append(cardBack);
-        let cardFront = $('<div>');
-        cardFront.addClass('card-front playing-card');
+        let cardFront = $('<img src=' + value + '>');
+        cardFront.addClass('card-front');
 
         // card front image
 
-        $('.card-front').append('<img src=' + value + '>');
-        card.append(cardFront);
+        card.appendTo(cardFront);
+
 
         // game container
 
