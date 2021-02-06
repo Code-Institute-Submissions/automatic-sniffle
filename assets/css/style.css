@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    padding: 20px;
+    padding: 10px;
     font-family: Potta One, Sans-Seriff;
     text-align: center;
 }
@@ -31,7 +31,11 @@ header {
 
 .btn {
     cursor: pointer;
-    background-color:
+    background-color: #3533C8;
+    display: flex;
+    justify-content: center;
+    width: 76px;
+    height: 38px;
 }
 
 /*----------------------- Overlay text */
@@ -48,8 +52,8 @@ header {
 .dashboard {
     font-family: Potta One, sans-serif;
     font-size: 20px;
-    padding: 16px;
-    margin: auto;
+    padding: 5px;
+    margin: 1px;
 
 }
 
@@ -89,6 +93,10 @@ header {
     background-color: #3533C8;
 }
 
+.visible {
+    display: none;
+}
+
 
 /*-------------------------- modal */
 
@@ -116,13 +124,15 @@ header {
 
 .game-container {
     margin: 10px;
-    height: 80%;
-    width: 80%;
+    height: 70%;
+    width: 100%;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    flex-direction: column;
+    align-content: center;
     flex-wrap: wrap;
     perspective: 1000px;
 }
@@ -131,10 +141,11 @@ header {
 .card {
     display: inline-block;
     margin: 10px;
-    line-height: 50px;
     padding: 5px;
-    width: 130px;
-    height: 175px;
+    width: 10%;
+    height: 25%;
+    line-height: 80px;
+    text-align: center;
     border-radius: 8px;
     background-color: #fff;
     background-image: image("assets");
@@ -158,15 +169,26 @@ header {
     transition: transform 0.7s;
 }
 
-.card-back {}
+.flip {}
 
-.card-front {}
+img {
+    width: 100%;
+    height: 100%;
+}
 
-.card.visible .card-back {
+.card-back {
+    display: block;
+}
+
+.card-front {
+    display: block;
+}
+
+.card.flip .card-back {
     transform: rotateY(-180deg);
 }
 
-.card.visible .card-front {
+.card.flip .card-front {
     transform: rotateY(0);
 }
 
