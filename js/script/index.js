@@ -142,10 +142,18 @@ $(document).ready(function () {
     // shuffle function
 
 
-    function shuffleArray(shuffle) {
-        shuffle.sort(function () {
-            return '.5' - Math.random();
-        });
+    function shuffleArray(array) {
+        let currentIndex = array.length,
+            temporaryValue, randomIndex;
+
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+        return array;
     }
 
     // what happens when the start button is clicked
@@ -166,30 +174,36 @@ $(document).ready(function () {
         game.cardArray = cardImages.concat(cardImages);
         console.log(game.cardArray);
         shuffleArray(game.cardArray);
-        $('.game-container').html('');
-        $.each(game.cardArray, function (key, value) {
-            console.log(key);
-            console.log(value);
-            let card = $('<li>');
-            console.log(card);
-            card.addClass('cards active');
-            card.data('cnt', key + 1);
-            card.data('val', value);
+        for (let i = 0; i < shuffleArray.length; i++) {
 
-            // cards
-
-            const cardFront = document.createElement('img');
-            cardFront.setAttribute('src', 'img/' + 'val');
-            cardFront.setAttribute('alt', 'image of a fish');
-
-            card.appendTo(cardFront);
+            $('.game-container').html('');
 
 
-            // add the card to the container
+            $.each(game.cardArray, function (key, value) {
+                console.log(key);
+                console.log(value);
+                let card = $('<li>');
+                console.log(card);
+                card.addClass('cards active');
+                card.data('cnt', key + 1);
+                card.data('val', value);
+
+                // cards
+
+                const cardFront = document.createElement('img');
+                cardFront.setAttribute('src', 'img/' + shuffleArray[i]);
+                cardFront.setAttribute('alt', 'image of a fish');
+
+                card.append(cardFront);
 
 
-            $('.game-container').append(card);
-        });
+                // add the card to the container
+
+
+                $('.game-container').append(card);
+
+            });
+        }
     }
 
 
@@ -214,5 +228,4 @@ $(document).ready(function () {
         timerCount.innerHTML = ' Time Elapsed: 00:00';
         startGame();
     }
-
 });
