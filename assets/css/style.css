@@ -149,7 +149,7 @@ header {
 }
 
 
-.cards {
+.cards.active {
     display: inline-block;
     position: relative;
     margin: 10px;
@@ -159,45 +159,42 @@ header {
     line-height: 70px;
     text-align: center;
     border-radius: 8px;
-    background-color: #fff;
-    cursor: pointer;
+    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(#15ffa5, #00ced1);
+    background-color: mediumspringgreen;
+    background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+    background-repeat: repeat;
     box-shadow: 1px 1px 1px 1px #595854;
     transform-style: preserve-3d;
-    transition: transform 0.7s;
+
     overflow: hidden;
 
 }
 
-.card:hover {
+.cards:hover {
     border: 1px black solid;
 }
 
-.flip {}
+.game-container img {
+    visibility: hidden;
+}
 
-img {
-    height: 95%;
-    width: 95%;
+.cards.flip {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    width: 10%;
+    height: 25%;
+    line-height: 70px;
+    text-align: center;
     border-radius: 8px;
-    align-content: center;
-    background-repeat: no-repeat;
-}
-
-.card-back {
-    display: block;
-}
-
-.card-front {
-    display: block;
-}
-
-.card.flip .card-back {
-    transform: rotateY(-180deg);
-}
-
-.card.flip .card-front {
-    transform: rotateY(0);
-}
-
-.card-front {
+    background: #fff;
+    box-shadow: 1px 1px 1px 1px #595854;
+    transform-style: preserve-3d;
     transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+
+.flip img {
+    visibility: visible;
 }
