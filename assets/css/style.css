@@ -37,6 +37,7 @@ header {
 .button-container {
     display: flex;
     justify-content: center;
+    margin: 20px;
 }
 
 .start,
@@ -66,8 +67,7 @@ header {
     font-family: Potta One, sans-serif;
     font-size: 20px;
     padding: 5px;
-    margin: 1px;
-
+    margin: 5px;
 }
 
 /*-------------------------- scores */
@@ -79,7 +79,8 @@ header {
 
 /*-------------------------- counter timer */
 
-.counter-timer {
+.count-container,
+.timer-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,17 +88,6 @@ header {
     margin: 5px;
     padding: 5px;
 }
-
-.move-counter {
-    margin-right: 20px;
-    font-size: 30px;
-}
-
-.timer {
-    margin-left: 20px;
-    font-size: 30px;
-}
-
 
 /*-------------------------- modal */
 
