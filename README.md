@@ -1,4 +1,4 @@
-# automatic-sniffle
+# automatic-sniffle aka Aquatic Snap 
 ##Milestone Project 2: Memory Card Game - https://olliemedley.github.io/automatic-sniffle/
 
 This allowed me to demonstrate my ability with HTML, CSS, Bootstrap and my new found knowledge of JavaScript and JQuery. 
