@@ -1,8 +1,46 @@
 // card array
 
-const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG", "assets/images/fish5.JPG", "assets/images/fish6.JPG", "assets/images/fish7.JPG", "assets/images/fish8.JPG", "assets/images/fish9.JPG", ];
+const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG", "assets/images/fish5.JPG", ];
 
 const game = {};
+
+// access modal
+
+const modal = document.getElementById('modal');
+
+// access reset
+
+const reset = document.querySelector('.reset');
+const playAgain = document.querySelector('.again-btn');
+
+// timer
+
+const timer = document.querySelector('#timer');
+let time;
+let minutes = 0;
+let seconds = 0;
+let timeStart = false;
+
+// start the timer once start has been pressed or reset
+
+function timer() {
+    time = setInterval(function () {
+        seconds++;
+        if (seconds === 60) {
+            minutes++;
+            seconds = 0;
+        }
+        // updating html
+        timer.innerHTML = ' Time Elapsed: ' + minutes + ' Mins ' + seconds + ' Secs';
+    }, 1000);
+)
+}
+
+// stop the timer at the end
+
+function timerStop() {
+    clearInterval(time)
+}
 
 // button start game
 
@@ -27,9 +65,9 @@ $('.game-container').on('click', '.active', function (event) {
                 game.stop = false;
                 console.log('match');
                 removeCards(game.pickedCards[0].data('val'));
-                removeCards(game.pickedCards[1].data('val'));
                 game.pickedCards = [];
                 if (game.cardArray.length == 0) {
+                    console.log('over');
                     displayModal();
                 }
             } else {
@@ -38,7 +76,7 @@ $('.game-container').on('click', '.active', function (event) {
             }
         }
     }
-})
+});
 
 // remove the cards from the pickedCards array
 
@@ -46,7 +84,7 @@ function removeCards(val) {
     console.log(game.cardArray);
     game.cardArray = game.cardArray.filter(function (element) {
         return element != val;
-    })
+    });
     console.log(game.cardArray);
 }
 
@@ -74,17 +112,18 @@ function flipBack(element) {
 
 function shuffleArray(shuffle) {
     shuffle.sort(function () {
-        return .5 - Math.random();
-    })
+        return '.5' - Math.random();
+    });
 }
 
-// what happens when the button is clicked
+// what happens when the start button is clicked
 
 function startGame() {
     console.log('start');
     $('.start').hide();
     $('.reset').removeClass('visible');
     game.clicks = 0;
+    timer();
     game.stop = false;
 
     // array to store the selected card
@@ -123,7 +162,7 @@ function startGame() {
 
 
         $('.game-container').append(card);
-    })
+    });
 }
 
 
@@ -132,15 +171,24 @@ function startGame() {
 
 function displayModal() {
     const modalClose = document.getElementsByClassName('close')[0];
+
+    // winning modal
+
     modal.style.display = 'block';
+
+    // close modal
+
     modalClose.onclick = function () {
         modal.style.display = 'none';
-    }
+    };
+
+    // close modal by clicking outside of window
+
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = 'none';
         }
-    }
+    };
 }
 
 // reset button and play again

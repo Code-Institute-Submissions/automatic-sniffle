@@ -6,12 +6,17 @@
 #fff;
 */
 
+/* -------------------------- main body */
+
 body {
     height: 100vh;
     padding: 0px;
     margin: 0px;
     background: radial-gradient(#ffbf80, #DA4424) no-repeat;
 }
+
+
+/* -------------------------- heading section */
 
 header {
     padding: 10px;
@@ -38,14 +43,18 @@ header {
     height: 38px;
 }
 
-/*----------------------- Overlay text */
-
-.overlay {
-    font-family: Potta One, sans-serif;
-    font-size: 30px;
-    text-align: center;
+.reset {
+    display: flex;
+    justify-content: center;
 }
 
+.reset input {
+    background-color: #3533C8;
+}
+
+.visible {
+    display: none;
+}
 
 /* ---------------------- dashboard */
 
@@ -65,6 +74,7 @@ header {
 }
 
 /*-------------------------- counter timer */
+
 .counter-timer {
     display: flex;
     flex-wrap: wrap;
@@ -84,22 +94,10 @@ header {
     font-size: 30px;
 }
 
-.reset {
-    display: flex;
-    justify-content: center;
-}
-
-.reset input {
-    background-color: #3533C8;
-}
-
-.visible {
-    display: none;
-}
-
 
 /*-------------------------- modal */
 
+/*-------------------------- needs to be hidden initially */
 .modal {
     display: none;
     position: fixed;
@@ -109,6 +107,10 @@ header {
 }
 
 .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 20% auto;
     padding: 20px;
     border: 1px solid #eee;
@@ -138,42 +140,37 @@ header {
 }
 
 
-.card {
+.cards {
     display: inline-block;
+    position: relative;
     margin: 10px;
     padding: 5px;
     width: 10%;
     height: 25%;
-    line-height: 80px;
+    line-height: 70px;
     text-align: center;
     border-radius: 8px;
     background-color: #fff;
-    background-image: image("assets");
     cursor: pointer;
     box-shadow: 1px 1px 1px 1px #595854;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+    overflow: hidden;
+
 }
 
 .card:hover {
     border: 1px black solid;
 }
 
-.playing-card {
-    position: absolute;
-    display: block;
-    width: 93%;
-    height: 94%;
-    border-radius: 12px;
-    overflow: hidden;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.7s;
-}
-
 .flip {}
 
 img {
-    width: 100%;
-    height: 100%;
+    height: 95%;
+    width: 95%;
+    border-radius: 8px;
+    align-content: center;
+    background-repeat: no-repeat;
 }
 
 .card-back {
