@@ -86,7 +86,7 @@ $(document).ready(function () {
             $('#move-counter').text(game.clicks);
             game.pickedCards.push($(this));
             $(this).removeClass('active');
-            $(this).find('.card-back').hide();
+            $(this).addClass('flip');
             $(this).find('.card-front').show();
 
             if (game.pickedCards.length === 2) {
@@ -133,7 +133,7 @@ $(document).ready(function () {
 
     function flipBack(element) {
         element.addClass('active');
-        element.find('.card-back').show();
+        element.removeClass('flip');
         element.find('.card-front').hide();
     }
 
@@ -170,7 +170,7 @@ $(document).ready(function () {
         $.each(game.cardArray, function (key, value) {
             console.log(key);
             console.log(value);
-            let card = $('<div>');
+            let card = $('<li>');
             console.log(card);
             card.addClass('cards active');
             card.data('cnt', key + 1);
@@ -178,18 +178,14 @@ $(document).ready(function () {
 
             // cards
 
-            let cardBack = $('<img src="assets/images/beach.JPG" alt="beach pic">');
-            cardBack.addClass('card-back active');
-            card.append(cardBack);
-            let cardFront = $('<img src=' + value + '>');
-            cardFront.addClass('card-front');
-
-            // card front image
+            const cardFront = document.createElement('img');
+            cardFront.setAttribute('src', 'img/' + 'val');
+            cardFront.setAttribute('alt', 'image of a fish');
 
             card.appendTo(cardFront);
 
 
-            // game container
+            // add the card to the container
 
 
             $('.game-container').append(card);
@@ -216,7 +212,6 @@ $(document).ready(function () {
         seconds = 0;
         minutes = 0;
         timerCount.innerHTML = ' Time Elapsed: 00:00';
-        game.pickedCards = [];
         startGame();
     }
 
