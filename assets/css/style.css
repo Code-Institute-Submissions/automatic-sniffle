@@ -34,19 +34,23 @@ header {
 
 /*-------------------------- button styling */
 
-input .btn {
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.start,
+.reset {
     cursor: pointer;
     background-color: #3533C8;
     display: flex;
     justify-content: center;
+    align-content: center;
     width: 76px;
     height: 38px;
+    border-radius: 3px;
 }
 
-.reset {
-    display: flex;
-    justify-content: center;
-}
 
 .reset input {
     background-color: #3533C8;
