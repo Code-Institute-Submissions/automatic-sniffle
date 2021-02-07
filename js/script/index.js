@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // card array
 
-    const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG", "assets/images/fish5.JPG", "assets/images/fish6.JPG", "assets/images/fish7.JPG", "assets/images/fish8.JPG", "assets/images/fish9.JPG", ];
+    const cardImages = ["fish1.JPG", "fish2.JPG", "fish3.JPG", "fish4.JPG", "fish5.JPG", "fish6.JPG", "fish7.JPG", "fish8.JPG", "fish9.JPG", ];
 
     const game = {};
 
@@ -191,7 +191,7 @@ $(document).ready(function () {
                 // cards
 
                 const cardFront = document.createElement('img');
-                cardFront.setAttribute('src', 'img/' + shuffleArray[i]);
+                cardFront.setAttribute('src', 'assets/images/' + value);
                 cardFront.setAttribute('alt', 'image of a fish');
 
                 card.append(cardFront);
