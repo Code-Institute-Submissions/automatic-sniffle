@@ -2,13 +2,39 @@ $(document).ready(function () {
 
     // card array
 
-    const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG", "assets/images/fish5.JPG", ];
+    const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", ];
 
     const game = {};
 
     // access modal
 
     const modal = document.getElementById('modal');
+
+
+    // display modal
+
+    function displayModal() {
+        const modalClose = document.getElementsByClassName('close')[0];
+
+        // winning modal
+
+        modal.style.display = 'block';
+
+        // close modal
+
+        modalClose.onclick = function () {
+            modal.style.display = 'none';
+        };
+
+        // close modal by clicking outside of window
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+    }
+
 
     // access reset
 
@@ -171,30 +197,6 @@ $(document).ready(function () {
     }
 
 
-
-    // display modal
-
-    function displayModal() {
-        const modalClose = document.getElementsByClassName('close')[0];
-
-        // winning modal
-
-        modal.style.display = 'block';
-
-        // close modal
-
-        modalClose.onclick = function () {
-            modal.style.display = 'none';
-        };
-
-        // close modal by clicking outside of window
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        };
-    }
 
     // reset button and play again
 
