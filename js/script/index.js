@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // card array
 
-    const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", ];
+    const cardImages = ["assets/images/fish1.JPG", "assets/images/fish2.JPG", "assets/images/fish3.JPG", "assets/images/fish4.JPG", "assets/images/fish5.JPG", "assets/images/fish6.JPG", "assets/images/fish7.JPG", "assets/images/fish8.JPG", "assets/images/fish9.JPG", ];
 
     const game = {};
 
