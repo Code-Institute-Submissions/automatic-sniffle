@@ -176,3 +176,4 @@ Shuffling cards: https://stackoverflow.com/questions/2450954/how-to-randomize-sh
 
 Modal help https://www.w3schools.com/howto/howto_css_modals.asp
 
+Card flip help https://stackoverflow.com/questions/31132848/flip-cards-using-jquery-and-css
