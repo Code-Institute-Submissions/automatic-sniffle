@@ -24,6 +24,9 @@ I also want everything to be responsive, so I used Bootstrap and flexbox to help
 
 Initially I wanted to use HTML to build the board, however found that there would be too many moving parts and I wanted to build up my jQuery knowledge, this proved to be a challenge in a lot of ways. 
 
+In the finished project the structure was a start button which led to the jQuery generating the board whilst the start button became a reset. 
+Upon finishing the game the Congratulations modal appears and gives the option to play again and the clicks remain on screen until the first card is clicked and it resets. 
+
 ### 4. Skeleton
 
 I used Balsamiq to build the wireframes for desktop, tablet and mobile device. 
@@ -56,7 +59,7 @@ Below are user stories for visitors to the site.
 - As a player, I want the images to be memorable
 - As a player, I want the game to be intuitive 
 - As a player, I want to have the choice to play again
-
+- As a player, I want it to be fun
 
 ### Wireframes: 
 
@@ -75,6 +78,7 @@ https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/Respo
 - A click counter
 - Reset button to restart the game
 - Media query to help the responsive design
+- 3D cards
 
 ### Features Left to Implement
 
@@ -131,13 +135,28 @@ The most complex function has a cyclomatic complexity value of 6 while the media
 
 There are 15 warnings relating to ES6 and one for possibly confusing semantics. 
 
+
+I used Lighthouse audits against mobile and desktop, mobile came out completely in the green, desktop I fell down on SEO which I will aim to solve later by adding a meta description. 
+
 ### Manual Testing
+
+I have been testing from start to finish as well as making sure that my code follows best practice. 
+
+I used breakpoints in Google Dev Tools to ensure that everything loaded in as it should, and to test any bugs that I had along the way. All of which is documented in the commits. 
+
+I also used dev tools frequently to check the responsive nature of the site, going through the mobile and tablet options and changing orientation. I'm not too happy with the mobile portrait display, not sure how I would lay it out to be better though. 
+
+I ensured with my jQuery that there were console.logs planted throughout so I could ensure that each function worked correctly. 
+
+These testing behaviours went alongside myself and partner playing the game multiple times and ensuring it worked fully, clicking everywhere and trying to break it by leaving the timer running, trying to click the same card, clicking multiple cards in fast succession, we also made sure it was fun. 
 
 ### User Story Tests:
 
 - As a player, I want to be able to find the game easily
 
 The start button begins the jQuery that begins the game. 
+
+https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/startScreenShot.JPG
 
 - As a player, I want the images to be memorable
 
@@ -149,7 +168,15 @@ There is a brief description of what the game is, the rest is standard for other
 
 - As a player, I want to have the choice to play again
 
-the reset button and the modal both have options to either restart or replay the game. I wanted to leave the reset button up there as you can leave the modal with everything restarting. I wanted the choice in multiple places. 
+The reset button and the modal both have options to either restart or replay the game. I wanted to leave the reset button up there as you can leave the modal with everything restarting. I wanted the choice in multiple places. 
+
+https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/CongratsScreenshot.JPG
+
+- As a player, I want it to be fun
+
+My partner, neices and nephews tried the game on multiple occassions to test this, the children (who are between 5 and 11) played it again and again, as did my partner. 
+
+Throughout the process I've kept these questions in mind, making sure that everything I wanted to achieve was kept simple and then compared the results across platforms using Dev Tools on Chrome. 
 
 ### Bugs: 
 
@@ -185,6 +212,10 @@ There aren't any differences between the deployed version and the source.
 The code can be run locally through clone or download.
 
 You can do this by opening the repository, clicking on the 'Code' button, and selecting either 'clone or download'.
+
+HTTPS: https://github.com/OllieMedley/automatic-sniffle.git
+
+Clone: gh repo clone OllieMedley/automatic-sniffle
 
 ### The site is published at https://olliemedley.github.io/automatic-sniffle/
 
