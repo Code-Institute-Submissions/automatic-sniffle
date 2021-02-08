@@ -1,6 +1,8 @@
 # automatic-sniffle aka Aquatic Snap 
 ## Milestone Project 2: Memory Card Game - https://olliemedley.github.io/automatic-sniffle/
 
+![alt text](https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/Responsive%20Screenshot.JPG)
+
 This allowed me to demonstrate my ability with HTML, CSS, Bootstrap and my new found knowledge of JavaScript and JQuery. 
 
 ## UX:
