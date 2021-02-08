@@ -1,7 +1,7 @@
 # automatic-sniffle aka Aquatic Snap 
 ## Milestone Project 2: Memory Card Game - https://olliemedley.github.io/automatic-sniffle/
 
-![alt text](https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/Responsive%20Screenshot.JPG)
+![alt text](https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/ResponsiveScreenshot.JPG)
 
 This allowed me to demonstrate my ability with HTML, CSS, Bootstrap and my new found knowledge of JavaScript and JQuery. 
 
@@ -69,7 +69,7 @@ The only changes I made to the original design were the placement of the number 
 Please find the wireframes in the link below and the responsive screenshot 
 
 https://github.com/OllieMedley/automatic-sniffle/tree/master/assets/wireframe
-https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/Responsive%20Screenshot.JPG
+https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/ResponsiveScreenshot.JPG
 
 ### Features
 
@@ -165,7 +165,7 @@ These testing behaviours went alongside myself and partner playing the game mult
 
 The start button begins the jQuery that begins the game. 
 
-https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/startScreenShot.JPG
+![alt text](https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/startScreenShot.JPG)
 
 - As a player, I want the images to be memorable
 
@@ -179,7 +179,7 @@ There is a brief description of what the game is, the rest is standard for other
 
 The reset button and the modal both have options to either restart or replay the game. I wanted to leave the reset button up there as you can leave the modal with everything restarting. I wanted the choice in multiple places. 
 
-https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/CongratsScreenshot.JPG
+![alt text](https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/CongratsScreenshot.JPG)
 
 - As a player, I want it to be fun
 
