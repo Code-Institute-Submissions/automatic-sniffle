@@ -1,5 +1,5 @@
 # automatic-sniffle aka Aquatic Snap 
-##Milestone Project 2: Memory Card Game - https://olliemedley.github.io/automatic-sniffle/
+## Milestone Project 2: Memory Card Game - https://olliemedley.github.io/automatic-sniffle/
 
 This allowed me to demonstrate my ability with HTML, CSS, Bootstrap and my new found knowledge of JavaScript and JQuery. 
 
@@ -31,8 +31,7 @@ Upon finishing the game the Congratulations modal appears and gives the option t
 
 I used Balsamiq to build the wireframes for desktop, tablet and mobile device. 
 
-xxxxxxxxxxxxxxx
-
+The links are in the Wireframe Section. 
 
 ### 5. Surface
 
