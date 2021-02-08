@@ -252,6 +252,8 @@ Modal help https://www.w3schools.com/howto/howto_css_modals.asp
 
 Card flip help https://stackoverflow.com/questions/31132848/flip-cards-using-jquery-and-css
 
+Animation help http://www.developphp.com/video/JavaScript/Trigger-CSS-Transitions-to-Control-Animations
+
 ### Evaluation 
 
 I believe the project fills the criteria of the design, it works and it's simple to understand and doesn't try to add anyhting superfluous to the site.
