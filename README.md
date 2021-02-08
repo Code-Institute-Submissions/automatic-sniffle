@@ -88,16 +88,24 @@ https://github.com/OllieMedley/automatic-sniffle/blob/master/assets/images/Respo
 
 ### Technologies Used
 Languages:
+
 -HTML
+
 -CSS
+
 -Javascript
+
 -jQuery
+
 -Bootstrap
 
 ### Libraries and Integrations: 
 -Google fonts (for typography)
+
 -FontAwesome (for the icons)
+
 -Bootstrap (used for the header, jumbotron, grid layout and cards)
+
 -jQuery https://jquery.com/
 
 
